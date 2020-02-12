@@ -10,12 +10,15 @@ using System.Windows.Forms;
 
 namespace PracticaDNI
 {
+
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
         }
+
 
         private void buttonConvert_Click(object sender, EventArgs e)
         {
@@ -25,15 +28,12 @@ namespace PracticaDNI
             textBoxLetter.Text = letter.ToString();
 
         }
-        private char functionDNI(int DNI)
+
+        private static char functionDNI(int DNI) 
         {
-
-            char letter = 'A';
-
-
-
-            return letter;
-
+            return "TRWAGMYFPDXBNJZSQVHLCKE"[DNI % 23];
         }
+
+
     }
 }
